@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>Slurper_Examples</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dandraka.Slurper" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="data/simple1.json" CopyToOutputDirectory="Always" />
+    <None Include="data/simple2Array.json" CopyToOutputDirectory="Always" />
+    <None Include="data/complex1.json" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
+</Project>
