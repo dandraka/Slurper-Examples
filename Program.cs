@@ -9,6 +9,7 @@ internal class Program
         doJsonSimple1();
         doJsonSimple2();
         doJsonSimple3();
+        doJsonNested1();
         //doJsonComplex1();
     }
 
@@ -40,17 +41,25 @@ internal class Program
         var jsonObj = JsonSlurper.ParseFile(getDataFilePath("simple3Array.json"));
         for (int i = 0; i < 3; i++)
         {
-            for (int j = 0; i < 5; i++)
+            for (int j = 0; j < 5; j++)
             {
                 Console.WriteLine((string)jsonObj.List[i].List[j].ToString());    
             }
         }
     }        
 
+    private static void doJsonNested1()
+    {
+        var jsonObj = JsonSlurper.ParseFile(getDataFilePath("nested1.json"));
+        Console.WriteLine((string)jsonObj.image.url);
+        Console.WriteLine((int)jsonObj.image.width);
+    }
+
     private static void doJsonComplex1()
     {
         var jsonObj = JsonSlurper.ParseFile(getDataFilePath("complex1.json"));
-        Console.WriteLine(jsonObj.problems.problems.Diabetes.Diabetes.labs);
-        Console.WriteLine(jsonObj.problems.Asthma);
+        // TODO seems that somehow nodes get doubled?
+        //Console.WriteLine(jsonObj.problems.problems.Diabetes.Diabetes.labs);
+        //Console.WriteLine(jsonObj.problems.Asthma);
     }
 }

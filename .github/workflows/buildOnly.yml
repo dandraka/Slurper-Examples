@@ -22,4 +22,4 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore Slurper-Examples.csproj
     - name: Build
-      run: dotnet build Slurper-Examples.csproj
+      run: dotnet build Slurper-Examples.csproj --no-restore
