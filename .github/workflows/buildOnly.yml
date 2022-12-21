@@ -20,6 +20,6 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
-      run: dotnet restore Dandraka.Slurper/Dandraka.Slurper.sln
+      run: dotnet restore Slurper-Examples.csproj
     - name: Build
-      run: dotnet build Dandraka.Slurper/Dandraka.Slurper.sln
+      run: dotnet build Slurper-Examples.csproj
