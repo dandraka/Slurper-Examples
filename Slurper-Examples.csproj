@@ -9,12 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dandraka.Slurper" Version="2.0.1" />
+    <PackageReference Include="Dandraka.Slurper" Version="2.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="data/simple1.json" CopyToOutputDirectory="Always" />
     <None Include="data/simple2Array.json" CopyToOutputDirectory="Always" />
+    <None Include="data/simple3Array.json" CopyToOutputDirectory="Always" />
     <None Include="data/complex1.json" CopyToOutputDirectory="Always" />
   </ItemGroup>
 

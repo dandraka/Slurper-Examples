@@ -8,6 +8,8 @@ internal class Program
     {
         doJsonSimple1();
         doJsonSimple2();
+        doJsonSimple3();
+        //doJsonComplex1();
     }
 
     private static string getDataFilePath(string fileName)
@@ -31,12 +33,24 @@ internal class Program
         {
             Console.WriteLine((string)jsonObj.List[i].ToString());    
         }
-    }    
+    }   
+
+    private static void doJsonSimple3()
+    {
+        var jsonObj = JsonSlurper.ParseFile(getDataFilePath("simple3Array.json"));
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; i < 5; i++)
+            {
+                Console.WriteLine((string)jsonObj.List[i].List[j].ToString());    
+            }
+        }
+    }        
 
     private static void doJsonComplex1()
     {
         var jsonObj = JsonSlurper.ParseFile(getDataFilePath("complex1.json"));
-        Console.WriteLine(jsonObj.problems.problems.Diabetes.labs);
+        Console.WriteLine(jsonObj.problems.problems.Diabetes.Diabetes.labs);
         Console.WriteLine(jsonObj.problems.Asthma);
     }
 }
