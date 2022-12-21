@@ -18,6 +18,7 @@
     <None Include="data/simple3Array.json" CopyToOutputDirectory="Always" />
     <None Include="data/complex1.json" CopyToOutputDirectory="Always" />
     <None Include="data/nested1.json" CopyToOutputDirectory="Always" />
+    <None Include="data/nested2WithArray.json" CopyToOutputDirectory="Always" />
   </ItemGroup>
 
 </Project>

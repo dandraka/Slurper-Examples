@@ -10,6 +10,7 @@ internal class Program
         doJsonSimple2();
         doJsonSimple3();
         doJsonNested1();
+        doJsonNested2();
         //doJsonComplex1();
     }
 
@@ -53,6 +54,14 @@ internal class Program
         var jsonObj = JsonSlurper.ParseFile(getDataFilePath("nested1.json"));
         Console.WriteLine((string)jsonObj.image.url);
         Console.WriteLine((int)jsonObj.image.width);
+    }
+
+    private static void doJsonNested2()
+    {
+        var jsonObj = JsonSlurper.ParseFile(getDataFilePath("nested2WithArray.json"));
+        // TODO fails
+        Console.WriteLine((string)jsonObj.data.dataList[0].categories.categories[0].CategoryName);
+        //Console.WriteLine((int)jsonObj.image.width);
     }
 
     private static void doJsonComplex1()
